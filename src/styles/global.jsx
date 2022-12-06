@@ -6,12 +6,17 @@ export const GlobalStyles = styled.div`
     padding: 0;
     box-sizing: border-box;
   }
-
-  li {
-    border: 1px solid #AAA;
-    margin: 20px 0;
+  .album {
+    border: 2px solid #000;
     padding: 20px;
-    list-style: none;
+    margin: 10px;
     cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: #000;
   }
+  .album:hover {
+    background-color: #EEE;
+  }
+
 `
