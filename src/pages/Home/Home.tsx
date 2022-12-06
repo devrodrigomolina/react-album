@@ -13,8 +13,8 @@ const Home = () => {
   const [albums, setAlbums] = useState<Albums[]>([]);
 
   const getAlbums = async () => {
-    const { data: json } = await api.get(`/albums`);
-    setAlbums(json);
+    const albumsReq = await api.getAlbum();
+    setAlbums(albumsReq);
   };
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Home = () => {
   }, []);
 
   return (
-    <ul>
+    <>
       {albums.map((item, index) => (
         <AlbumItens 
           key={index}
@@ -30,7 +30,7 @@ const Home = () => {
           id={item.id} 
         />
       ))}
-    </ul>
+    </>
   );
 };
 
